@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: summary
+  kafka:
+    bootstrap-servers: localhost:9092
+    streams:
+      application-id: summary
+      bootstrap-servers: localhost:9092
+      properties:
+        default-key-serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+        default-value-serde: com.engkimbs.serializer.JsonSerde
+        schema-registry-url: http://localhost:8081
